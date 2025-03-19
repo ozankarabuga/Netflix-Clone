@@ -1,0 +1,249 @@
+/* css reset  */
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body{
+    background-color: black;
+    color: white;
+}
+
+
+/* <!-- seperation GRİ ÇİZGİ kısmı  -->  */
+
+.seperation {
+    border: 3px solid rgb(54, 54, 54);
+}
+
+
+
+
+/* main kısmı  */
+
+.main{
+    background-image: url(assets/banner.jpg);
+    background-position: center;
+    background-size: max(1200px, 100vw);
+    background-repeat: no-repeat;
+    height: 644px;
+    position: relative;
+}
+
+.box {
+    background-color:rgba(0, 0, 0, 0.6);
+    position: absolute;
+    top: 0;
+    width: 100%;
+    height: 644px;
+}
+
+
+
+
+
+
+
+.nav{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 60vw;
+     /* vw demek mevcut pencerede şu kadar alan kapla demek */
+     margin: auto;
+height: 100px;
+z-index: 10 !important;
+
+}
+
+.nav img {
+    width: 130px;
+    z-index: 10 !important;
+    
+}
+
+.btn {
+    padding: 3px 8px;
+    background-color: rgba(248, 243, 243, 0.021);
+    color: white;
+    font-size: 16px;
+    cursor: pointer;
+    border: 1px solid white;
+    border-radius: 4px;
+ 
+
+}
+
+.buttons  {
+    z-index: 10 !important;
+}
+
+.btn-red {
+    background-color: red;
+}
+
+.btn:hover {
+    background-color: red;
+    transition: all 0.4s;
+}
+
+.btn-red:hover {
+    background-color: rgba(248, 243, 243, 0.021);
+}
+
+
+
+
+/* hero  */
+
+/* box elemanı mainin üzerine pozisyonladıktan sonra diğer elemanlar altta kaldı, Bunu düzeltebilmek için z index vermek gerekti. Z index verirken .nav ve .hero kısmına  index verince calısmıyordu. Bundan dolayı position relative verdik  */
+
+.hero {
+
+    /* burada position relative vermeyince z index çalışmadı  */
+    position: relative; 
+    
+     flex-direction: column;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 30px;
+    padding: 0 30px;
+    z-index: 10 !important;
+    height: calc(100% - 100px);
+
+}
+
+.hero-tittle {
+    font-size: 48px;
+    font-weight: bolder;
+
+}
+
+.hero-desc{
+    font-size: 24px;
+    font-weight:500;
+    text-align: center;
+
+}
+
+.hero-bottom{
+    font-size: 18px;
+    text-align: center;
+
+}
+
+.hero-buttons {
+    display: flex; 
+    gap: 10px;
+    align-items: center;
+    justify-content: center;
+}
+
+.hero-buttons input {
+    padding: 7px 10px 8px 14px;
+    font-size: 12px;
+    background-color: rgba(23, 23, 23, 0.7);
+    border: 1px solid rgb(197, 197, 197);
+    border-radius: 4px;
+    outline: none; 
+    color: white; 
+}
+
+.hero-buttons button {
+    padding: 4px 10px;
+    font-size: 18px;
+}
+
+/* info area başlyıor  */
+
+.info-area {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    max-width: 70vw;
+    margin: auto;
+}
+
+.image-area {
+    position: relative;
+}
+
+.image-area img {
+    width: 555px;
+    position: relative;
+    z-index: 10;
+    /* z index vererek tv nin arkasında kalmasını sağladık videonun  */
+}
+
+.image-area video {
+    position: absolute;
+    top: 80px;
+    right: 70px;
+}
+
+.text-area h1 {
+    font-size: 48px;
+    font-weight: bolder;
+}
+
+.text-area p {
+    font-size: 24px;
+    margin-top: 10px; 
+}
+
+
+
+
+/* medya etiketleri  */
+
+@media (max-width: 1000px) {
+    .info-area{
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+    }
+
+.info-area h1{
+    margin: 25px auto;
+}
+}
+
+
+
+
+
+@media (max-width: 800px) {
+    .info-area h1 {
+        font-size: 30px;
+        margin-top: 50px;
+    }
+.info-area p {
+    font-size: 20px;
+    margin-top: 20px;
+}
+
+.image-area {
+    overflow: hidden;
+    /* taşmaları engeller  */
+}
+
+.image-area img {
+    width: 100%;
+position: relative;
+}
+
+.image-area video {
+    width: 100%;
+    overflow: hidden;
+    /* taşmaları engeller  */
+    position: absolute;
+    top: 0;
+    right:  0;
+}
+}
+
+
+
