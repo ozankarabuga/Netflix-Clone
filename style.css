@@ -194,7 +194,61 @@ z-index: 10 !important;
     margin-top: 10px; 
 }
 
-
+/* Sıkça Sorulan Sorular Kısmı*/
+.faq {
+    padding: 35px;
+  }
+  
+  .faq h2 {
+    text-align: center;
+    font-size: 48px;
+  }
+  
+  .faq .faqbox {
+    background-color: #272727;
+    font-size: 24px;
+    display: flex;
+    justify-content: space-between;
+    padding: 24px;
+    margin: 34px auto;
+    max-width: 60vw;
+    transition: all 0.5sn;
+  }
+  
+  .faq .faqbox:hover {
+    background-color: rgb(23, 23, 23);
+  }
+  
+  .footer {
+    max-width: 60vw;
+    margin: auto;
+    margin-bottom: 100px;
+  }
+  
+  .footer .questions {
+    padding: 34px 0;
+    font-size: 25px;
+  }
+  
+  .footer .footer-list {
+    display: flex;
+    justify-content: space-between;
+    gap: 10px;
+  }
+  
+  .footer .footer-list .footer-item {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+  }
+  
+  .footer .footer-list .footer-item a {
+    color: white;
+    font-size: 20px;
+    transition: all 0.2s;
+  }
+  .footer .footer-list .footer-item a:hover {
+    transform: scale(1.1); }
 
 
 /* medya etiketleri  */
